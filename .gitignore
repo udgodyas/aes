@@ -59,3 +59,6 @@ data/*.xlsx
 # Training script (not needed for deployment)
 sbert.py
 
+# Deployment documentation (not needed for deployment)
+DEPLOYMENT.md
+
