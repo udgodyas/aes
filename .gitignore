@@ -50,7 +50,7 @@ Thumbs.db
 # saved_models/*.pkl
 # saved_models_2/*.pkl
 
-# Data files (uncomment if data is sensitive)
-# data/*.docx
-# data/*.xlsx
+# Data files (sensitive data - not tracked)
+data/*.docx
+data/*.xlsx
 
