@@ -36,8 +36,10 @@ ENV/
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Model results (optional - uncomment if you don't want to track)
-# model_results*.txt
+# Model results (not tracked)
+model_results*.txt
+*.txt
+!requirements.txt
 
 # OS
 .DS_Store
@@ -48,7 +50,7 @@ Thumbs.db
 
 # Large model files (uncomment if using GitHub LFS or cloud storage)
 # saved_models/*.pkl
-# saved_models_2/*.pkl
+saved_models_2/
 
 # Data files (sensitive data - not tracked)
 data/*.docx
