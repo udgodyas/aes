@@ -43,9 +43,10 @@ if 'loaded_models' not in st.session_state:
 if 'sbert_model' not in st.session_state:
     st.session_state.sbert_model = None
 
-# Model yükleme fonksiyonu
+# Model yükleme fonksiyonu (cache'lenmiş)
+@st.cache_resource
 def load_models_from_dir(models_dir):
-    """Modelleri dizinden yükler"""
+    """Modelleri dizinden yükler (cache'lenmiş)"""
     loaded = {}
     errors = []
     
@@ -55,7 +56,6 @@ def load_models_from_dir(models_dir):
             try:
                 with open(model_path, 'rb') as f:
                     loaded[criterion] = pickle.load(f)
-                st.sidebar.success(f"✓ {criterion} yüklendi")
             except Exception as e:
                 errors.append(f"{criterion}: {str(e)}")
         else:
@@ -63,11 +63,22 @@ def load_models_from_dir(models_dir):
     
     return loaded, errors
 
-# Model yükleme
-if load_models or st.session_state.models_loaded:
-    if not st.session_state.models_loaded or load_models:
-        with st.sidebar:
-            with st.spinner("Modeller yükleniyor..."):
+# SBERT model yükleme (cache'lenmiş)
+@st.cache_resource
+def load_sbert_model():
+    """SBERT modelini yükler (cache'lenmiş)"""
+    try:
+        return SentenceTransformer('all-mpnet-base-v2')
+    except Exception as e:
+        st.error(f"SBERT modeli yüklenemedi: {str(e)}")
+        return None
+
+# Model yükleme (otomatik veya buton ile)
+if load_models or not st.session_state.models_loaded:
+    with st.sidebar:
+        with st.spinner("Modeller yükleniyor..."):
+            try:
+                # Modelleri yükle
                 loaded, errors = load_models_from_dir(models_dir)
                 
                 if loaded:
@@ -76,17 +87,19 @@ if load_models or st.session_state.models_loaded:
                     
                     # SBERT modelini yükle
                     if st.session_state.sbert_model is None:
-                        try:
-                            st.session_state.sbert_model = SentenceTransformer('all-mpnet-base-v2')
-                            st.sidebar.success("✓ SBERT modeli yüklendi")
-                        except Exception as e:
-                            st.sidebar.error(f"SBERT modeli yüklenemedi: {str(e)}")
+                        st.session_state.sbert_model = load_sbert_model()
                     
-                    st.sidebar.success(f"✓ {len(loaded)} model yüklendi")
+                    if st.session_state.sbert_model is not None:
+                        st.sidebar.success(f"✓ {len(loaded)} model yüklendi")
+                    else:
+                        st.sidebar.warning("Modeller yüklendi ancak SBERT modeli yüklenemedi")
                 else:
                     st.sidebar.error("Hiçbir model yüklenemedi!")
                     for error in errors:
                         st.sidebar.error(error)
+            except Exception as e:
+                st.sidebar.error(f"Model yükleme hatası: {str(e)}")
+                st.session_state.models_loaded = False
 
 # Ana içerik
 if st.session_state.models_loaded and st.session_state.loaded_models:
@@ -174,6 +187,10 @@ if st.session_state.models_loaded and st.session_state.loaded_models:
         if criterion not in st.session_state.loaded_models:
             return None
         
+        if st.session_state.sbert_model is None:
+            st.error("SBERT modeli yüklenmemiş!")
+            return None
+        
         model_data = st.session_state.loaded_models[criterion]
         sbert_model = st.session_state.sbert_model
         
@@ -221,7 +238,9 @@ if st.session_state.models_loaded and st.session_state.loaded_models:
             
             return float(prediction)
         except Exception as e:
-            st.error(f"Hata: {str(e)}")
+            st.error(f"Hata ({criterion}): {str(e)}")
+            import traceback
+            st.code(traceback.format_exc())
             return None
     
     # Puanlama
