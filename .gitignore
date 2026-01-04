@@ -56,3 +56,6 @@ saved_models_2/
 data/*.docx
 data/*.xlsx
 
+# Training script (not needed for deployment)
+sbert.py
+
