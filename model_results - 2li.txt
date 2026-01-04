@@ -1,0 +1,261 @@
+================================================================================
+SBERT MODEL EĞİTİMİ SONUÇ RAPORU
+================================================================================
+Oluşturulma Tarihi: 2026-01-03 22:24:01
+Model: SBERT (all-mpnet-base-v2)
+Rater: RA (Sadece RA skorları kullanıldı)
+================================================================================
+
+GENEL BİLGİLER
+--------------------------------------------------------------------------------
+Toplam Essay Sayısı: 59
+Eğitilen Model Sayısı: 7
+Eğitilen Kriterler: TITLE, THESIS, ORGANISATION, SUPPORT, ANALYSIS, SENTENCE, GRAMMAR
+
+================================================================================
+KRİTER BAZINDA DETAYLI SONUÇLAR
+================================================================================
+
+--------------------------------------------------------------------------------
+KRİTER: TITLE (RA)
+--------------------------------------------------------------------------------
+Örnek Sayısı: 59
+Skor Sütunu: RA_TITLE
+
+Cross Validation (5-Fold) Sonuçları:
+  R² Skoru: 0.4051 (+/- 0.3155)
+  RMSE: 0.5689
+  MAE: 0.4043
+
+Test Seti Performansı:
+  RMSE: 1.0101
+  MAE: 0.8634
+  R² Skoru: -0.4839
+
+İstatistikler:
+  Gerçek RA Skorları:
+    - Ortalama: 3.7500
+    - Standart Sapma: 0.8292
+    - Minimum: 3.0000
+    - Maksimum: 6.0000
+  Tahmin Edilen Skorlar:
+    - Ortalama: 4.3287
+    - Standart Sapma: 0.3263
+    - Minimum: 3.7271
+    - Maksimum: 4.8410
+
+PCA Bilgisi:
+  Bileşen Sayısı: 20
+  Açıklanan Varyans: 0.8260 (82.60%)
+
+
+--------------------------------------------------------------------------------
+KRİTER: THESIS (RA)
+--------------------------------------------------------------------------------
+Örnek Sayısı: 59
+Skor Sütunu: RA_THESIS
+
+Cross Validation (5-Fold) Sonuçları:
+  R² Skoru: 0.3101 (+/- 0.2438)
+  RMSE: 0.7129
+  MAE: 0.5789
+
+Test Seti Performansı:
+  RMSE: 0.9640
+  MAE: 0.8675
+  R² Skoru: -0.6123
+
+İstatistikler:
+  Gerçek RA Skorları:
+    - Ortalama: 3.5833
+    - Standart Sapma: 0.7592
+    - Minimum: 3.0000
+    - Maksimum: 5.0000
+  Tahmin Edilen Skorlar:
+    - Ortalama: 3.8989
+    - Standart Sapma: 0.5892
+    - Minimum: 2.6081
+    - Maksimum: 4.7938
+
+PCA Bilgisi:
+  Bileşen Sayısı: 20
+  Açıklanan Varyans: 0.8260 (82.60%)
+
+
+--------------------------------------------------------------------------------
+KRİTER: ORGANISATION (RA)
+--------------------------------------------------------------------------------
+Örnek Sayısı: 59
+Skor Sütunu: RA_ORGANISATION
+
+Cross Validation (5-Fold) Sonuçları:
+  R² Skoru: 0.0706 (+/- 0.4097)
+  RMSE: 0.7267
+  MAE: 0.5968
+
+Test Seti Performansı:
+  RMSE: 0.7705
+  MAE: 0.6743
+  R² Skoru: -0.4491
+
+İstatistikler:
+  Gerçek RA Skorları:
+    - Ortalama: 3.5833
+    - Standart Sapma: 0.6401
+    - Minimum: 3.0000
+    - Maksimum: 5.0000
+  Tahmin Edilen Skorlar:
+    - Ortalama: 3.6451
+    - Standart Sapma: 0.3792
+    - Minimum: 2.7729
+    - Maksimum: 4.1119
+
+PCA Bilgisi:
+  Bileşen Sayısı: 20
+  Açıklanan Varyans: 0.8260 (82.60%)
+
+
+--------------------------------------------------------------------------------
+KRİTER: SUPPORT (RA)
+--------------------------------------------------------------------------------
+Örnek Sayısı: 59
+Skor Sütunu: RA_SUPPORT
+
+Cross Validation (5-Fold) Sonuçları:
+  R² Skoru: 0.0857 (+/- 0.2459)
+  RMSE: 0.5929
+  MAE: 0.4247
+
+Test Seti Performansı:
+  RMSE: 0.6191
+  MAE: 0.5039
+  R² Skoru: 0.0646
+
+İstatistikler:
+  Gerçek RA Skorları:
+    - Ortalama: 3.5833
+    - Standart Sapma: 0.6401
+    - Minimum: 3.0000
+    - Maksimum: 5.0000
+  Tahmin Edilen Skorlar:
+    - Ortalama: 3.6842
+    - Standart Sapma: 0.3130
+    - Minimum: 3.0881
+    - Maksimum: 4.2168
+
+PCA Bilgisi:
+  Bileşen Sayısı: 20
+  Açıklanan Varyans: 0.8260 (82.60%)
+
+
+--------------------------------------------------------------------------------
+KRİTER: ANALYSIS (RA)
+--------------------------------------------------------------------------------
+Örnek Sayısı: 59
+Skor Sütunu: RA_ANALYSIS
+
+Cross Validation (5-Fold) Sonuçları:
+  R² Skoru: 0.2083 (+/- 0.1574)
+  RMSE: 0.5298
+  MAE: 0.4623
+
+Test Seti Performansı:
+  RMSE: 0.7738
+  MAE: 0.6752
+  R² Skoru: -0.6907
+
+İstatistikler:
+  Gerçek RA Skorları:
+    - Ortalama: 3.7500
+    - Standart Sapma: 0.5951
+    - Minimum: 3.0000
+    - Maksimum: 5.0000
+  Tahmin Edilen Skorlar:
+    - Ortalama: 3.6541
+    - Standart Sapma: 0.3591
+    - Minimum: 3.0118
+    - Maksimum: 4.3743
+
+PCA Bilgisi:
+  Bileşen Sayısı: 20
+  Açıklanan Varyans: 0.8260 (82.60%)
+
+
+--------------------------------------------------------------------------------
+KRİTER: SENTENCE (RA)
+--------------------------------------------------------------------------------
+Örnek Sayısı: 59
+Skor Sütunu: RA_SENTENCE
+
+Cross Validation (5-Fold) Sonuçları:
+  R² Skoru: 0.1321 (+/- 0.8603)
+  RMSE: 0.5095
+  MAE: 0.3576
+
+Test Seti Performansı:
+  RMSE: 0.7884
+  MAE: 0.6879
+  R² Skoru: -0.1933
+
+İstatistikler:
+  Gerçek RA Skorları:
+    - Ortalama: 3.2500
+    - Standart Sapma: 0.7217
+    - Minimum: 2.0000
+    - Maksimum: 5.0000
+  Tahmin Edilen Skorlar:
+    - Ortalama: 3.4986
+    - Standart Sapma: 0.2130
+    - Minimum: 3.0979
+    - Maksimum: 3.8663
+
+PCA Bilgisi:
+  Bileşen Sayısı: 20
+  Açıklanan Varyans: 0.8260 (82.60%)
+
+
+--------------------------------------------------------------------------------
+KRİTER: GRAMMAR (RA)
+--------------------------------------------------------------------------------
+Örnek Sayısı: 59
+Skor Sütunu: RA_GRAMMAR
+
+Cross Validation (5-Fold) Sonuçları:
+  R² Skoru: 0.3893 (+/- 0.3362)
+  RMSE: 0.4998
+  MAE: 0.2766
+
+Test Seti Performansı:
+  RMSE: 0.7158
+  MAE: 0.5713
+  R² Skoru: -0.5371
+
+İstatistikler:
+  Gerçek RA Skorları:
+    - Ortalama: 3.0000
+    - Standart Sapma: 0.5774
+    - Minimum: 2.0000
+    - Maksimum: 4.0000
+  Tahmin Edilen Skorlar:
+    - Ortalama: 2.9562
+    - Standart Sapma: 0.2993
+    - Minimum: 2.4268
+    - Maksimum: 3.4388
+
+PCA Bilgisi:
+  Bileşen Sayısı: 20
+  Açıklanan Varyans: 0.8260 (82.60%)
+
+
+================================================================================
+ÖZET TABLO
+================================================================================
+Kriter          Örnek      CV R²        Test R²      RMSE       MAE       
+--------------------------------------------------------------------------------
+TITLE           59         0.4051         -0.4839         1.0101       0.8634
+THESIS          59         0.3101         -0.6123         0.9640       0.8675
+ORGANISATION    59         0.0706         -0.4491         0.7705       0.6743
+SUPPORT         59         0.0857         0.0646         0.6191       0.5039
+ANALYSIS        59         0.2083         -0.6907         0.7738       0.6752
+SENTENCE        59         0.1321         -0.1933         0.7884       0.6879
+GRAMMAR         59         0.3893         -0.5371         0.7158       0.5713

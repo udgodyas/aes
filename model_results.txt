@@ -1,0 +1,345 @@
+================================================================================
+SBERT MODEL EĞİTİMİ SONUÇ RAPORU
+================================================================================
+Oluşturulma Tarihi: 2026-01-04 10:02:29
+Model: SBERT (all-mpnet-base-v2)
+Rater: RA (Sadece RA skorları kullanıldı)
+================================================================================
+
+GENEL BİLGİLER
+--------------------------------------------------------------------------------
+Toplam Essay Sayısı: 59
+Eğitilen Model Sayısı: 7
+Eğitilen Kriterler: TITLE, THESIS, ORGANISATION, SUPPORT, ANALYSIS, SENTENCE, GRAMMAR
+
+================================================================================
+KRİTER BAZINDA DETAYLI SONUÇLAR
+================================================================================
+
+--------------------------------------------------------------------------------
+KRİTER: TITLE (RA)
+--------------------------------------------------------------------------------
+Örnek Sayısı: 59
+Skor Sütunu: RA_TITLE
+
+Cross Validation (5-Fold) Sonuçları:
+  R² Skoru: 0.8303 (+/- 0.1005)
+  RMSE: 0.2995
+  MAE: 0.1723
+
+Test Seti Performansı:
+  RMSE: 0.8006
+  MAE: 0.6254
+  R² Skoru: 0.0676
+
+İstatistikler:
+  Gerçek RA Skorları:
+    - Ortalama: 3.7500
+    - Standart Sapma: 0.8292
+    - Minimum: 3.0000
+    - Maksimum: 6.0000
+  Tahmin Edilen Skorlar:
+    - Ortalama: 3.8231
+    - Standart Sapma: 0.4527
+    - Minimum: 2.7594
+    - Maksimum: 4.7305
+
+En Önemli 10 Özellik:
+  1. Özellik 6: 0.3427
+  2. Özellik 12: 0.1594
+  3. Özellik 35: 0.1073
+  4. Özellik 34: 0.0325
+  5. Özellik 38: 0.0324
+  6. Özellik 40: 0.0318
+  7. Özellik 31: 0.0308
+  8. Özellik 11: 0.0284
+  9. Özellik 14: 0.0269
+  10. Özellik 36: 0.0261
+
+PCA Bilgisi:
+  Bileşen Sayısı: 30
+  Açıklanan Varyans: 0.8969 (89.69%)
+
+
+--------------------------------------------------------------------------------
+KRİTER: THESIS (RA)
+--------------------------------------------------------------------------------
+Örnek Sayısı: 59
+Skor Sütunu: RA_THESIS
+
+Cross Validation (5-Fold) Sonuçları:
+  R² Skoru: 0.8206 (+/- 0.1171)
+  RMSE: 0.3714
+  MAE: 0.2166
+
+Test Seti Performansı:
+  RMSE: 0.6208
+  MAE: 0.5406
+  R² Skoru: 0.3315
+
+İstatistikler:
+  Gerçek RA Skorları:
+    - Ortalama: 3.5833
+    - Standart Sapma: 0.7592
+    - Minimum: 3.0000
+    - Maksimum: 5.0000
+  Tahmin Edilen Skorlar:
+    - Ortalama: 3.6615
+    - Standart Sapma: 0.4525
+    - Minimum: 3.0935
+    - Maksimum: 4.5599
+
+En Önemli 10 Özellik:
+  1. Özellik 16: 0.2899
+  2. Özellik 38: 0.2530
+  3. Özellik 31: 0.0792
+  4. Özellik 4: 0.0654
+  5. Özellik 10: 0.0441
+  6. Özellik 14: 0.0424
+  7. Özellik 6: 0.0316
+  8. Özellik 17: 0.0305
+  9. Özellik 29: 0.0240
+  10. Özellik 32: 0.0237
+
+PCA Bilgisi:
+  Bileşen Sayısı: 30
+  Açıklanan Varyans: 0.8969 (89.69%)
+
+
+--------------------------------------------------------------------------------
+KRİTER: ORGANISATION (RA)
+--------------------------------------------------------------------------------
+Örnek Sayısı: 59
+Skor Sütunu: RA_ORGANISATION
+
+Cross Validation (5-Fold) Sonuçları:
+  R² Skoru: 0.7857 (+/- 0.2493)
+  RMSE: 0.3456
+  MAE: 0.2002
+
+Test Seti Performansı:
+  RMSE: 0.6851
+  MAE: 0.5546
+  R² Skoru: -0.1454
+
+İstatistikler:
+  Gerçek RA Skorları:
+    - Ortalama: 3.5833
+    - Standart Sapma: 0.6401
+    - Minimum: 3.0000
+    - Maksimum: 5.0000
+  Tahmin Edilen Skorlar:
+    - Ortalama: 3.6176
+    - Standart Sapma: 0.3921
+    - Minimum: 2.9568
+    - Maksimum: 4.2112
+
+En Önemli 10 Özellik:
+  1. Özellik 27: 0.5226
+  2. Özellik 31: 0.0953
+  3. Özellik 30: 0.0934
+  4. Özellik 38: 0.0632
+  5. Özellik 10: 0.0318
+  6. Özellik 3: 0.0228
+  7. Özellik 16: 0.0222
+  8. Özellik 37: 0.0166
+  9. Özellik 24: 0.0152
+  10. Özellik 14: 0.0129
+
+PCA Bilgisi:
+  Bileşen Sayısı: 30
+  Açıklanan Varyans: 0.8969 (89.69%)
+
+
+--------------------------------------------------------------------------------
+KRİTER: SUPPORT (RA)
+--------------------------------------------------------------------------------
+Örnek Sayısı: 59
+Skor Sütunu: RA_SUPPORT
+
+Cross Validation (5-Fold) Sonuçları:
+  R² Skoru: 0.8093 (+/- 0.1284)
+  RMSE: 0.2790
+  MAE: 0.1530
+
+Test Seti Performansı:
+  RMSE: 0.7602
+  MAE: 0.6410
+  R² Skoru: -0.4103
+
+İstatistikler:
+  Gerçek RA Skorları:
+    - Ortalama: 3.5833
+    - Standart Sapma: 0.6401
+    - Minimum: 3.0000
+    - Maksimum: 5.0000
+  Tahmin Edilen Skorlar:
+    - Ortalama: 3.7395
+    - Standart Sapma: 0.3714
+    - Minimum: 3.0763
+    - Maksimum: 4.3590
+
+En Önemli 10 Özellik:
+  1. Özellik 29: 0.3909
+  2. Özellik 36: 0.2648
+  3. Özellik 3: 0.1761
+  4. Özellik 30: 0.0550
+  5. Özellik 17: 0.0179
+  6. Özellik 38: 0.0149
+  7. Özellik 37: 0.0084
+  8. Özellik 31: 0.0082
+  9. Özellik 18: 0.0074
+  10. Özellik 14: 0.0071
+
+PCA Bilgisi:
+  Bileşen Sayısı: 30
+  Açıklanan Varyans: 0.8969 (89.69%)
+
+
+--------------------------------------------------------------------------------
+KRİTER: ANALYSIS (RA)
+--------------------------------------------------------------------------------
+Örnek Sayısı: 59
+Skor Sütunu: RA_ANALYSIS
+
+Cross Validation (5-Fold) Sonuçları:
+  R² Skoru: 0.8253 (+/- 0.1508)
+  RMSE: 0.2467
+  MAE: 0.1442
+
+Test Seti Performansı:
+  RMSE: 0.6799
+  MAE: 0.5930
+  R² Skoru: -0.3051
+
+İstatistikler:
+  Gerçek RA Skorları:
+    - Ortalama: 3.7500
+    - Standart Sapma: 0.5951
+    - Minimum: 3.0000
+    - Maksimum: 5.0000
+  Tahmin Edilen Skorlar:
+    - Ortalama: 3.6445
+    - Standart Sapma: 0.2689
+    - Minimum: 3.1356
+    - Maksimum: 4.1063
+
+En Önemli 10 Özellik:
+  1. Özellik 35: 0.4603
+  2. Özellik 12: 0.1814
+  3. Özellik 17: 0.0588
+  4. Özellik 4: 0.0563
+  5. Özellik 26: 0.0360
+  6. Özellik 43: 0.0335
+  7. Özellik 13: 0.0268
+  8. Özellik 14: 0.0242
+  9. Özellik 34: 0.0224
+  10. Özellik 30: 0.0135
+
+PCA Bilgisi:
+  Bileşen Sayısı: 30
+  Açıklanan Varyans: 0.8969 (89.69%)
+
+
+--------------------------------------------------------------------------------
+KRİTER: SENTENCE (RA)
+--------------------------------------------------------------------------------
+Örnek Sayısı: 59
+Skor Sütunu: RA_SENTENCE
+
+Cross Validation (5-Fold) Sonuçları:
+  R² Skoru: 0.7761 (+/- 0.1659)
+  RMSE: 0.2906
+  MAE: 0.1591
+
+Test Seti Performansı:
+  RMSE: 0.8893
+  MAE: 0.7548
+  R² Skoru: -0.5184
+
+İstatistikler:
+  Gerçek RA Skorları:
+    - Ortalama: 3.2500
+    - Standart Sapma: 0.7217
+    - Minimum: 2.0000
+    - Maksimum: 5.0000
+  Tahmin Edilen Skorlar:
+    - Ortalama: 3.4827
+    - Standart Sapma: 0.2395
+    - Minimum: 3.0958
+    - Maksimum: 3.8993
+
+En Önemli 10 Özellik:
+  1. Özellik 40: 0.7264
+  2. Özellik 28: 0.1594
+  3. Özellik 10: 0.0168
+  4. Özellik 5: 0.0131
+  5. Özellik 37: 0.0120
+  6. Özellik 33: 0.0109
+  7. Özellik 13: 0.0106
+  8. Özellik 19: 0.0074
+  9. Özellik 8: 0.0058
+  10. Özellik 21: 0.0056
+
+PCA Bilgisi:
+  Bileşen Sayısı: 30
+  Açıklanan Varyans: 0.8969 (89.69%)
+
+
+--------------------------------------------------------------------------------
+KRİTER: GRAMMAR (RA)
+--------------------------------------------------------------------------------
+Örnek Sayısı: 59
+Skor Sütunu: RA_GRAMMAR
+
+Cross Validation (5-Fold) Sonuçları:
+  R² Skoru: 0.7897 (+/- 0.2092)
+  RMSE: 0.2969
+  MAE: 0.1484
+
+Test Seti Performansı:
+  RMSE: 0.7112
+  MAE: 0.5936
+  R² Skoru: -0.5175
+
+İstatistikler:
+  Gerçek RA Skorları:
+    - Ortalama: 3.0000
+    - Standart Sapma: 0.5774
+    - Minimum: 2.0000
+    - Maksimum: 4.0000
+  Tahmin Edilen Skorlar:
+    - Ortalama: 3.0116
+    - Standart Sapma: 0.4347
+    - Minimum: 2.1889
+    - Maksimum: 3.8263
+
+En Önemli 10 Özellik:
+  1. Özellik 40: 0.4922
+  2. Özellik 10: 0.1376
+  3. Özellik 35: 0.1088
+  4. Özellik 15: 0.0524
+  5. Özellik 5: 0.0338
+  6. Özellik 14: 0.0195
+  7. Özellik 25: 0.0168
+  8. Özellik 43: 0.0151
+  9. Özellik 2: 0.0142
+  10. Özellik 36: 0.0131
+
+PCA Bilgisi:
+  Bileşen Sayısı: 30
+  Açıklanan Varyans: 0.8969 (89.69%)
+
+
+================================================================================
+ÖZET TABLO
+================================================================================
+Kriter          Örnek      CV R²        Test R²      RMSE       MAE       
+--------------------------------------------------------------------------------
+TITLE           59         0.8303         0.0676         0.8006       0.6254
+THESIS          59         0.8206         0.3315         0.6208       0.5406
+ORGANISATION    59         0.7857         -0.1454         0.6851       0.5546
+SUPPORT         59         0.8093         -0.4103         0.7602       0.6410
+ANALYSIS        59         0.8253         -0.3051         0.6799       0.5930
+SENTENCE        59         0.7761         -0.5184         0.8893       0.7548
+GRAMMAR         59         0.7897         -0.5175         0.7112       0.5936
